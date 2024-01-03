@@ -29,6 +29,7 @@ Sentry's Session Replay SDK takes several measures to avoid negatively impacting
 While the performance overhead of our client SDK will be imperceptible to end-users most of the time, it can vary based on the complexity of your application. If an applications has a large DOM and numerous DOM node mutations, it will have a higher overhead than simpler, mostly static sites.
 
 There are different stages in the lifecycle of a webpage, each with different performance characteristics. Here is a list of stages in the lifecycle, and the most important performance metrics to measure.
+
 1. Pageload
    - [SDK bundle size is something we optimize for](https://blog.sentry.io/sentry-bundle-size-how-we-reduced-replay-sdk-by-35/)
    - The size of your initial html page will affect how long the initial snapshot that the SDK takes, and has to send over the wire. Using your browser devtools, filter the Network panel to show "type=document" and look at the size to get a sense of the impact on your site. For example, if you show a loading screen on a single-page-app then the overhead is negligable.
